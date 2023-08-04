@@ -15,7 +15,8 @@ export default {
 
 	  colors: {
 		primary: "#FFAB08",
-		secondary: "#FF7020"
+		secondary: "#FF7020",
+		
 	  },
       backgroundColor: {
         primary: '#FFAB08',
@@ -23,11 +24,14 @@ export default {
         bg: '#F2F2F3',
         silver: '#F9F9F9',
       },
+	  borderColor: {
+		silver: '#F2F2F3'
+	  },
 	  backgroundImage: {
 		header: `url("data:image/svg+xml, %3Csvg id='header' width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='100' cy='100' r='100' fill='%23FFAB08'/%3E%3C/svg%3E")`
 	  },
       gridTemplateColumns: {
-        'admin-layout':
+        'main-layout':
           '[full-start] minmax(30px, 100px) [center-start] repeat(8,[col-start] minmax(min-content, 150px) [col-end]) [center-end] minmax(30px, 100px) [full-end]',
         'responsive-sm': 'repeat(auto-fit,minmax(200px,1fr))',
         'responsive-md': 'repeat(3,minmax(min-content, 430px))',
@@ -38,6 +42,7 @@ export default {
       gridColumn: {
         'admin-sidebar': 'center-start / col-end 1',
         'admin-content': 'col-start 2 / center-end',
+        'basket': 'center-start / col-end 2',
       },
     },
   },
