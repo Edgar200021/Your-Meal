@@ -1,4 +1,4 @@
-import { IsEmail, Length } from 'class-validator'
+//import { IsEmail, Length } from 'class-validator'
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm'
 
 @Entity()
@@ -6,7 +6,7 @@ export class User {
   @PrimaryGeneratedColumn('uuid')
   id: string
 
-  @Length(3, 30)
+  //  @Length(3, 30)
   @Column({
     type: 'text',
     nullable: false,

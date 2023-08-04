@@ -70,9 +70,9 @@ class ProductsController {
       price,
       title,
       description,
-      ingridients,
+      ingredients,
       weight,
-      calory,
+      calories,
       category,
     } = req.body
 
@@ -86,9 +86,9 @@ class ProductsController {
           price,
           title,
           description,
-          ingridients,
+          ingredients,
           weight,
-          calory,
+          calories,
           category,
         })
       )

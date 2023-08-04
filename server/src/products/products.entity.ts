@@ -7,6 +7,13 @@ export class Product {
 
   @Column({
     type: 'text',
+    unique: true,
+    nullable: false,
+  })
+  title: string
+
+  @Column({
+    type: 'text',
     nullable: false,
   })
   img: string
@@ -16,13 +23,6 @@ export class Product {
     nullable: false,
   })
   price: number
-
-  @Column({
-    type: 'text',
-    unique: true,
-    nullable: false,
-  })
-  title: string
 
   @Column({
     type: 'varchar',
@@ -35,7 +35,7 @@ export class Product {
     array: true,
     nullable: false,
   })
-  ingridients: string[]
+  ingredients: string[]
 
   @Column('int', {
     nullable: false,
@@ -45,7 +45,7 @@ export class Product {
   @Column('int', {
     nullable: false,
   })
-  calory: number
+  calories: number
 
   @Column('text', {
     nullable: false,
