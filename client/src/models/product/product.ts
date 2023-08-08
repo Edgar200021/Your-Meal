@@ -1,10 +1,10 @@
 export interface IProduct {
-  id?:string
+  id: number
   title: string
   img: string
   price: number
   description: string
-  ingridients: string[]
+  ingredients: string[]
   weight: number
   calory: number
   category: string

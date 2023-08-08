@@ -14,12 +14,23 @@ import AdminProductsUpdate, {
 import AdminProductsDelete, {
   AdminProductsDeleteAction,
 } from '../pages/AdminProductsDelete/AdminProductsDelete'
-import AppLayout from '../layouts/AppLayout/AppLayout'
+import AppLayout, { AppLayoutLoader } from '../layouts/AppLayout/AppLayout'
+import ProductPage, {
+  ProductPageLoader,
+} from '../pages/ProductPage/ProductPage'
 
 export const router = createBrowserRouter([
   {
     element: <AppLayout />,
-	path: '/'
+    path: '/',
+    loader: AppLayoutLoader,
+    children: [
+      {
+        path: '/products/:id',
+        element: <ProductPage />,
+        loader: ProductPageLoader,
+      },
+    ],
   },
   {
     element: <AdminLayout />,

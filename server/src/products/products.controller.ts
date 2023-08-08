@@ -54,7 +54,7 @@ class ProductsController {
 
       if (!product)
         return res.json({
-          error: `There are no prodct with id ${req.params.id}`,
+          error: `There are no product with id ${req.params.id}`,
         })
 
       return res.json(instanceToPlain(product)).status(200)

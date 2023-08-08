@@ -1,7 +1,8 @@
 import logo from '../../assets/icons/logo-white.svg'
 import burger from '../../assets/icons/burger.svg'
+import { memo } from 'react'
 
-const Header = () => {
+const Header = memo(() => {
   return (
     <header
       id="header"
@@ -29,6 +30,6 @@ const Header = () => {
       </div>
     </header>
   )
-}
+})
 
 export default Header

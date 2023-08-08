@@ -23,6 +23,7 @@ export default {
         secondary: '#FF7020',
         bg: '#F2F2F3',
         silver: '#F9F9F9',
+		modal: '#000000CC'
       },
 	  borderColor: {
 		silver: '#F2F2F3'
@@ -34,7 +35,8 @@ export default {
         'main-layout':
           '[full-start] minmax(30px, 100px) [center-start] repeat(8,[col-start] minmax(min-content, 150px) [col-end]) [center-end] minmax(30px, 100px) [full-end]',
         'responsive-sm': 'repeat(auto-fit,minmax(200px,1fr))',
-        'responsive-md': 'repeat(3,minmax(min-content, 430px))',
+        'responsive-md': 'repeat(3,minmax(200px, 430px))',
+		'single-product': '276px,344px'
       },
       gridTemplateRows: {
         'admin-main-content': 'repeat(2, minmax(350px, min-content))',
@@ -43,6 +45,7 @@ export default {
         'admin-sidebar': 'center-start / col-end 1',
         'admin-content': 'col-start 2 / center-end',
         'basket': 'center-start / col-end 2',
+		'main-content': 'col-start 3 / center-end',
       },
     },
   },

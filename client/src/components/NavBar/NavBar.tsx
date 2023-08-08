@@ -1,13 +1,30 @@
 import { navbar } from '../../constants/navbar'
+import { Category } from '../../enums/cateogory'
+import { MouseEvent } from 'react'
+import { memo } from 'react'
+
+interface NavBarProps {
+  onCategory: (category: Category, title: string) => void
+}
+
 import Button from '../Button/Button'
-const NavBar = () => {
+const NavBar = memo(({ onCategory }: NavBarProps) => {
   return (
-    <nav >
-      <ul className=" pt-12 px-8 flex gap-x-5 justify-center tablet:justify-start overflow-x-auto overflow-y-visible scrollbar-thin  scrollbar-thumb-[#FF7020]  scrollbar-track-slate-800 phone:px-2  ">
+    <nav>
+      <ul
+        id="navbar"
+        className=" pt-12 px-8 pb-2 flex gap-x-5 justify-center tablet:justify-start overflow-x-auto overflow-y-visible scrollbar-thin  scrollbar-thumb-[#ffab08]  scrollbar-track-slate-800 phone:px-2 snap-x  "
+      >
         {navbar.map(({ value, text }) => {
           return (
-            <li className="min-w-[fit-content]" key={value}>
-              <Button to='value' value={value} variants="mini">
+            <li className="min-w-[fit-content] snap-center" key={value}>
+              <Button
+                onClick={() => {
+                  onCategory(value, text)
+                }}
+                value={value}
+                variants="mini"
+              >
                 <img
                   src={`../../../public/icons/navbar/${value}.svg`}
                   alt={text}
@@ -20,6 +37,6 @@ const NavBar = () => {
       </ul>
     </nav>
   )
-}
+})
 
 export default NavBar

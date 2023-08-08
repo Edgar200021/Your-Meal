@@ -1,16 +1,18 @@
+import { Category } from '../enums/cateogory'
+
 interface Navbar {
-  value: string
+  value: Category
   text: string
 }
 
 export const navbar: Navbar[] = [
-  { value: 'burger', text: 'Бургер' },
-  { value: 'snack', text: 'Закуски' },
-  { value: 'hot-dog', text: 'Хот-Доги' },
-  { value: 'combo', text: 'Комбо' },
-  { value: 'shawarma', text: 'Шаурма' },
-  { value: 'pizza', text: 'Пицца' },
-  { value: 'vok', text: 'Вок' },
-  { value: 'dessert', text: 'Дессерты' },
-  { value: 'sauce', text: 'Соусы' },
+  { value: Category.BURGER, text: 'Бургер' },
+  { value: Category.SNACK, text: 'Закуски' },
+  { value: Category.HOTDOG, text: 'Хот-Доги' },
+  { value: Category.COMBO, text: 'Комбо' },
+  { value: Category.SHAWARMA, text: 'Шаурма' },
+  { value: Category.PIZZA, text: 'Пицца' },
+  { value: Category.VOK, text: 'Вок' },
+  { value: Category.DESSERT, text: 'Дессерты' },
+  { value: Category.SAUCE, text: 'Соусы' },
 ]

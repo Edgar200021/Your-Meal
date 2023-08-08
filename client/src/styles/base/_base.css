@@ -16,6 +16,10 @@ html::-webkit-scrollbar-track {
   border-radius: 10px;
 }
 
+html::-webkit-scrollbar-corner {
+  background-color: red;
+}
+
 #basket-list::-webkit-scrollbar-corner {
   background-color: red;
 }
@@ -33,9 +37,6 @@ html::-webkit-scrollbar-track {
   border-radius: 10px;
 }
 
-html::-webkit-scrollbar-corner {
-  background-color: red;
-}
 
 
 .loader {
